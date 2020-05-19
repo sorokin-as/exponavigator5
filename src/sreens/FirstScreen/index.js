@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import { StyleSheet, Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -7,16 +7,27 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const FirstScreen = ({ navigation }) => {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.fcontainer}>
             <Text>Home Screen</Text>
             <Button
                 title="Go to Details"
-                onPress={() => navigation.navigate('SecondScreen')}
+                onPress={() => navigation.navigate('SScreen')}
             />
         </View>
     );
 }
 
 
+const styles = StyleSheet.create({
+    fcontainer: {
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center'
+
+    }
+})
+
+
 
 export { FirstScreen }
+

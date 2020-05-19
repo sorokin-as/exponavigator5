@@ -7,11 +7,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const SecondScreen = ({ navigation }) => {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Details Screen</Text>
+            <View style={{
+                flex: 2,
+                justifyContent: 'center',
+                alignItems: 'center'}}>
+                <Text>sssss Screen</Text>
                 <Button
                     title="Go to Details... again"
-                    onPress={() => navigation.push('SecondScreen')}
+                    onPress={() => navigation.push('SScreen')}
                 />
             </View>
         );
